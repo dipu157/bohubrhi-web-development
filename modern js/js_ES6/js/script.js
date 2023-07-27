@@ -18,7 +18,31 @@ var numbers =[1,54,-7,45,0,8]
 let person = ["Ahmed", "Dipu"]
 
 let test = (fname,lname) => {
-    console.log(`Hello Mr. ${fname} ${lname}.`)
+    //console.log(`Hello Mr. ${fname} ${lname}.`)
 }
 
 test(...person);
+
+//Promise
+let prom = new Promise((resolve,reject) =>{
+    let a;
+
+    setTimeout(() =>{
+        a = 1+2;
+
+        if(a==3){
+            resolve("Success");
+        }else{
+            reject("Failed");
+        }
+    },2000)    
+});
+
+prom.then((message) => {
+    console.log("I am from " + message);
+}).catch((message) => {
+    console.log("I am from catch " + message);  
+})
+
+console.log("I am after promise");
+
