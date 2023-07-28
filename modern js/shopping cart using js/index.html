@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" 
+    integrity="sha512-5fsy+3xG8N/1PV5MIJz9ZsWpkltijBI48gBzQ/Z2eVATePGHOkMIn+xTDHIfTZFVb9GMpflF2wOWItqxAP2oLQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Shopping Cart Using JS</title>
+</head>
+<body>
+    <div class="container">
+        <h3>Product List</h3>
+        <table class="u-full-width">
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="productList">
+                <tr>
+                    <td>Laptop</td>
+                    <td>30000 tk</td>
+                    <td><button class="btn btn-primary">Add To Cart</button></td>
+                </tr>
+
+                <tr>
+                    <td>Mobile</td>
+                    <td>20000 tk</td>
+                    <td><button class="btn btn-primary">Add To Cart</button></td>
+                </tr>
+
+                <tr>
+                    <td>Keyboard</td>
+                    <td>2000 tk</td>
+                    <td><button class="btn btn-primary">Add To Cart</button></td>
+                </tr>
+
+                <tr>
+                    <td>Mouse</td>
+                    <td>1000 tk</td>
+                    <td><button class="btn btn-primary">Add To Cart</button></td>
+                </tr>
+
+                <tr>
+                    <td>Desktop</td>
+                    <td>40000 tk</td>
+                    <td><button class="btn btn-primary">Add To Cart</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="u-full-width">
+            <thead>
+                <tr><h3>My Cart</h3></tr>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="productCartList">
+
+            </tbody>
+        </table>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
