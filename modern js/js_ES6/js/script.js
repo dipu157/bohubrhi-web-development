@@ -59,9 +59,14 @@ async function getJokes() {
     return data;
 }
 
-console.log(getJokes());
+//console.log(getJokes());
 
+// Set
+let mySet = new Set();
+mySet.add("hello");
+mySet.add([88,47]);
 
+console.log(mySet);
 
 
 
