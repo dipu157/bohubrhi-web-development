@@ -39,10 +39,31 @@ let prom = new Promise((resolve,reject) =>{
 });
 
 prom.then((message) => {
-    console.log("I am from " + message);
+    //console.log("I am from " + message);
 }).catch((message) => {
-    console.log("I am from catch " + message);  
+   // console.log("I am from catch " + message);  
 })
 
-console.log("I am after promise");
+//console.log("I am after promise");
+
+
+// Async Await
+
+// fetch('http://api.icndb.com/jokes/random/5000')
+//     .then(response => response.json())
+//     .then(data => console.log(data));
+
+async function getJokes() {
+    let response = await fetch('https://jsonplaceholder.typicode.com/users');
+    let data = await response.json();
+    return data;
+}
+
+console.log(getJokes());
+
+
+
+
+
+
 
