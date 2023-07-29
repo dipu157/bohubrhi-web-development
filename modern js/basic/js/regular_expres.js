@@ -61,10 +61,37 @@ re = /^([0-9]xy){4}/;
 re = /^01[0-9]{9}$/;
 re = /^+8801[0-9]{9}$/;
 
+// Shorthand Character Classes
+re = /w/; // Word Character - alpha numeric or _
+re = /w+/; // One or more
+re = /W/; // Non Word Character
+re = /W+/; // one or more
+re = /d/; // Digit
+re = /d+/;
+re = /D/; // Non digit
+re = /s/; // Match white space
+re = /S/; // Match non white space
+re = /Hellob/; // Word Boundary
+re = /bHellob/;
 
-str = "2xy3xy7xy8xy";
-str = "01788888888";
-str = "+8801811888889";
+// Assertions
+re = /x(?=yz)/; // Matches x only if x is before y
+re = /x(?!yz)/;
+
+// Postal Code
+// 4700, 4000
+re = /^[0-9]{4}$/;
+str = "4000";
+
+// Phone Number
+// 01717888888 +8801717888888 8801717888888
+re = /^(+)?(88)?01[0-9]{9}$/;
+str = "+8801717888888";
+
+// Email Address
+// bohubrihi8.learn@edu.com.bd
+re = /^([a-zA-Z0-9].?)+[^.]@([a-zA-Z0-9].?)+[^.]$/ ;
+str = "bohubrihi.learn@edu.com.bd" ;
 
 reTest(re,str);
 function reTest(re,str){
