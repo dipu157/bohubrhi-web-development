@@ -5,8 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
     <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .header{
+            border: 2px solid red;
+            padding: 10px;
+        }
+
+        .left{
+            border: 2px solid red;
+            float:left;
+            width: 30%;
+            padding: 10px;
+        }
+
+        .main{
+            border: 2px solid red;
+            float:left;
+            width: 70%;
+            padding: 10px;
+        }
+
+        @media only screen and (max-width:600px) {
+            body{
+                background-color: aqua;
+            }
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="header">
+        <h1>This is heading</h1>
+    </div>
+
+    <div class="left">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, a laborum velit nihil aperiam libero ipsa nisi id quam neque quod officia reprehenderit eveniet consectetur ducimus expedita, tempore earum eos eius veritatis at dolores iusto adipisci? Vitae, voluptatibus neque! Tenetur laboriosam alias ea fugit quo aperiam mollitia? Repellendus, earum veritatis.</p>
+    </div>
+
+    <div class="main">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate reprehenderit architecto similique harum accusantium beatae placeat nesciunt quod voluptas maxime assumenda voluptatum cumque voluptate error praesentium, voluptatibus doloribus consectetur perferendis facere omnis eaque, officiis dolor exercitationem. Blanditiis nisi commodi, modi asperiores vel ut, quos autem dolores natus necessitatibus repudiandae atque temporibus eum voluptatem harum, illum praesentium ad maxime animi beatae delectus optio dicta id laudantium! Quos voluptas obcaecati esse magnam! Dolor porro repellendus ratione veniam nam placeat quisquam, quis cum suscipit, rerum nostrum molestias recusandae excepturi quidem animi veritatis velit vel ullam pariatur eum itaque aliquid nulla fuga maxime! Voluptates!</p>
+    </div>
 </body>
 </html>
