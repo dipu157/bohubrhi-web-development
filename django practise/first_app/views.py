@@ -2,18 +2,22 @@ from django.shortcuts import render
 from first_app import forms
 
 
-def form(request):
-    new_form = forms.MusicianForm()
-    diction = {'test_form' : new_form, 'heading':"This is heading"}
+def index(request):
+    diction = {'title':"Home Page"}
+    return render(request,'first_app/index.html',context=diction)
 
-    if request.method == 'POST':
-        new_form = forms.MusicianForm(request.POST)
 
-        if new_form.is_valid():
-            new_form.save(commit=True)
-            return form(request)
+def album_list(request):
+    diction = {'title':"List of Album"}
+    return render(request,'first_app/index.html',context=diction)
 
-    return render(request, 'first_app/form.html', context=diction)
+def musician_form(request):
+    diction = {'title':"Add Musician"}
+    return render(request,'first_app/musician_form.html',context=diction)
+
+def album_form(request):
+    diction = {'title':"Add Album"}
+    return render(request,'first_app/album_form.html',context=diction)
 
 
 
