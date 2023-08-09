@@ -11,8 +11,9 @@ def index(request):
 
 def album_list(request,artist_id):
     artist_info = Musician.objects.get(pk=artist_id)
+    album_list = Album.objects.filter(artist=artist_id)
     print(artist_info)
-    diction = {'title':"List of Album",'artist_info':artist_info}
+    diction = {'title':"List of Album",'artist_info':artist_info,'album_list':album_list}
     return render(request,'first_app/album_list.html',context=diction)
 
 def musician_form(request):

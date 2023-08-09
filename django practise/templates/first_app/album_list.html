@@ -3,4 +3,20 @@
 <h3>List of Album</h3>
 <h4>Artist Name: {{ artist_info.first_name }} {{ artist_info.last_name }}</h4>
 <h4>Instrument : {{ artist_info.instrument }}</h4>
+
+<h3>List of Album</h3>
+<table class="table table-bordered">
+        <tr>
+            <th>Album Name</th>
+            <th>Release Date</th>
+            <th>Rating</th>
+        </tr>
+        {% for album in album_list %}
+        <tr>
+            <td>{{ album.name }}</td>
+            <td>{{ album.release_date|date:"M d, Y" }}</td>
+            <td>{{ album.num_stars }}</td>
+        </tr>
+        {% endfor %}
+</table>
 {% endblock %}
