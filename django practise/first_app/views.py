@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from first_app import forms
-from .models import Musician
+from .models import Musician,Album
 
 
 def index(request):
@@ -9,9 +9,11 @@ def index(request):
     return render(request,'first_app/index.html',context=diction)
 
 
-def album_list(request):
-    diction = {'title':"List of Album"}
-    return render(request,'first_app/index.html',context=diction)
+def album_list(request,artist_id):
+    artist_info = Musician.objects.get(pk=artist_id)
+    print(artist_info)
+    diction = {'title':"List of Album",'artist_info':artist_info}
+    return render(request,'first_app/album_list.html',context=diction)
 
 def musician_form(request):
     form = forms.MusicianForm()
